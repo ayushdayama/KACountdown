@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/KACountdown/static/css/main.5f80a348.css",
+    "main.js": "/KACountdown/static/js/main.a5dc2236.js",
+    "static/media/EditedBgRmUs.png": "/KACountdown/static/media/EditedBgRmUs.a3c05409ed4ff06a30f8.png",
+    "index.html": "/KACountdown/index.html",
+    "main.5f80a348.css.map": "/KACountdown/static/css/main.5f80a348.css.map",
+    "main.a5dc2236.js.map": "/KACountdown/static/js/main.a5dc2236.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f80a348.css",
+    "static/js/main.a5dc2236.js"
+  ]
+}
