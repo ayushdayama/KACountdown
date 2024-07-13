@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/KACountdown/static/css/main.5f80a348.css",
-    "main.js": "/KACountdown/static/js/main.a5dc2236.js",
-    "static/media/EditedBgRmUs.png": "/KACountdown/static/media/EditedBgRmUs.a3c05409ed4ff06a30f8.png",
+    "main.css": "/KACountdown/static/css/main.c65addee.css",
+    "main.js": "/KACountdown/static/js/main.85668e9f.js",
+    "static/media/BgPhn.jpg": "/KACountdown/static/media/BgPhn.0618d1b9dde177dc1169.jpg",
+    "static/media/BgComp.jpg": "/KACountdown/static/media/BgComp.9bc411bacc38ec1e9008.jpg",
     "index.html": "/KACountdown/index.html",
-    "main.5f80a348.css.map": "/KACountdown/static/css/main.5f80a348.css.map",
-    "main.a5dc2236.js.map": "/KACountdown/static/js/main.a5dc2236.js.map"
+    "main.c65addee.css.map": "/KACountdown/static/css/main.c65addee.css.map",
+    "main.85668e9f.js.map": "/KACountdown/static/js/main.85668e9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f80a348.css",
-    "static/js/main.a5dc2236.js"
+    "static/css/main.c65addee.css",
+    "static/js/main.85668e9f.js"
   ]
 }
