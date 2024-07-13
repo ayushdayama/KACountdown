@@ -1,38 +1,73 @@
 .counter {
-  display: flex;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+  justify-content: center;
 
   .counter-item {
-    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0.25rem;
     background: var(--blue);
+    width: 100%; /* Ensure full width in grid cell */
+    text-align: center;
 
     span.label {
-      font-size: 0.8rem;
+      font-size: 1.2rem;
       color: var(--blue-dark);
       width: 100%;
       text-transform: uppercase;
       font-weight: 700;
-      text-align: center;
       margin-top: 0.1rem;
       background: var(--white);
     }
 
     span.value {
-      width: 100%;
       padding: 0 0.5rem;
       font-size: 4rem;
       color: var(--white);
-      text-align: center;
+      width: 100%;
     }
+  }
 
-    @media (max-width: 500px) {
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for smaller screens */
+    grid-template-rows: repeat(2, auto); /* Ensure 2 rows */
+    gap: 0.75rem;
+
+    .counter-item {
       span.value {
-        font-size: 2.5rem;
+        font-size: 5rem; /* Adjust font size */
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    gap: 0.75rem; /* Further reduce gap */
+
+    .counter-item {
+      span.value {
+        font-size: 4rem; /* Further adjust font size */
+      }
+
+      span.label {
+        font-size: 1.2rem; /* Adjust label font size */
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    gap: 0.25rem; /* Further reduce gap */
+
+    .counter-item {
+      span.value {
+        font-size: 3.5rem; /* Further adjust font size */
+      }
+
+      span.label {
+        font-size: 1rem; /* Further adjust label font size */
       }
     }
   }

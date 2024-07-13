@@ -1,32 +1,19 @@
 main {
   display: flex;
-  padding: 2rem;
-  height: 100vh;
+  flex-direction: column; /* Column direction by default for mobile */
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center; /* Center align content for mobile */
 
-  img {
-    margin-left: 2rem;
-  }
-
-  @media (max-width: 1170px) {
-    flex-direction: column;
-
-    img {
-      margin: 2rem 0;
-      width: 400px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    flex-direction: column;
-
-    img {
-      margin: 2rem 0;
-      width: 300px;
-    }
+  /* Layout for large screens */
+  @media (min-width: 900px) {
+    flex-direction: row; /* Row direction for large screens */
+    align-items: center;
+    text-align: left; /* Align text to the left for large screens */
   }
 }
 
@@ -34,19 +21,36 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center; /* Center align text for mobile */
 
   h1 {
-    color: var(--blue);
-    font-size: 3.75rem;
+    text-shadow: 5px 4px 0px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    color: white;
+    font-size: 3rem;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 1.5rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 3rem;
   }
 
+  /* Adjust font size for medium screens */
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  /* Adjust font size for small screens */
+  @media (max-width: 569px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* Adjust font size for very small screens */
   @media (max-width: 500px) {
     h1 {
       font-size: 1.8rem;
-      text-align: center;
     }
 
     p {
@@ -55,25 +59,76 @@ main {
   }
 
   p {
-    color: var(--text-medium);
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
-  button {
-    font-size: 1rem;
-    max-width: 400px;
-    width: 100%;
-    padding: 0.8rem 2rem;
-    background: var(--blue);
-    color: var(--white);
-    border: none;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    transition: filter 0.3s;
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+  }
 
-    &:hover {
-      filter: brightness(0.7);
+  .button:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+  }
+
+  .button:active {
+    transform: scale(0.97);
+  }
+
+  .hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .hoverEffect div {
+    background: rgb(222, 0, 75);
+    background: linear-gradient(
+      90deg,
+      rgba(222, 0, 75, 1) 0%,
+      rgba(191, 70, 255, 1) 49%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+  }
+
+  .button:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  @keyframes effect {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
