@@ -20,9 +20,19 @@ export default function App() {
     }, 5000); // Allow 5 seconds for the last pieces to fall
   }, []);
 
+  // Function to launch only confetti
+  const launchConfetti = () => {
+    setConfettiProps({ run: true, recycle: true });
+
+    // Stop generating new confetti after 3 seconds
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = window.setTimeout(stopConfetti, 3000);
+  };
+
+  // Function to launch confetti and show toast
   const notify = () => {
     setIsToastVisible(true);
-    setConfettiProps({ run: true, recycle: true });
+    launchConfetti(); // Use the confetti-only function here
     toast("💞 2nd Dec", {
       duration: 3000,
       style: {
@@ -34,10 +44,6 @@ export default function App() {
         color: "white",
       },
     });
-
-    // Stop generating new confetti after 3 seconds
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = window.setTimeout(stopConfetti, 3000);
   };
 
   return (
@@ -51,7 +57,8 @@ export default function App() {
       <div className="container">
         <h1>Kavita 💍 Ayush</h1>
 
-        <Counter />
+        {/* Use launchConfetti for every minute completion */}
+        <Counter onMinuteComplete={launchConfetti} />
 
         <p>💞</p>
 
