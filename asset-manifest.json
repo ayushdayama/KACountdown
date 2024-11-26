@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/KACountdown/static/css/main.c65addee.css",
-    "main.js": "/KACountdown/static/js/main.85668e9f.js",
+    "main.js": "/KACountdown/static/js/main.cccfefc5.js",
     "static/media/BgPhn.jpg": "/KACountdown/static/media/BgPhn.0618d1b9dde177dc1169.jpg",
     "static/media/BgComp.jpg": "/KACountdown/static/media/BgComp.9bc411bacc38ec1e9008.jpg",
     "index.html": "/KACountdown/index.html",
     "main.c65addee.css.map": "/KACountdown/static/css/main.c65addee.css.map",
-    "main.85668e9f.js.map": "/KACountdown/static/js/main.85668e9f.js.map"
+    "main.cccfefc5.js.map": "/KACountdown/static/js/main.cccfefc5.js.map"
   },
   "entrypoints": [
     "static/css/main.c65addee.css",
-    "static/js/main.85668e9f.js"
+    "static/js/main.cccfefc5.js"
   ]
 }
